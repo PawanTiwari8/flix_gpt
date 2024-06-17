@@ -1,3 +1,14 @@
+# flixgpt
+- Create React App
+- Configure TailwindCSS
+- Header
+- Routing of App
+- Login Form
+- Sign up Form
+- form validation
+- useRef Hook
+
+
 # features
 - Login/signup
     - sign/sign up form
