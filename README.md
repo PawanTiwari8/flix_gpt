@@ -13,6 +13,9 @@
 - Created Redux Store with UserSlice 
 - Implemented Sign out 
 - Update Profile 
+- Bug Fixes: Adding .env to move valid secrets into secure space
+- Bug Fixes:If the user is not logged in Redirect /browse to login and vice-versa
+- Unsubscribed to the onAuthStateChanged callback(unmount the useEffect)
 
 
 # features

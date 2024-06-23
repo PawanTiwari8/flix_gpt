@@ -5,7 +5,6 @@ import { useState,useRef} from 'react'
 import { checkValidate } from '../utils/Validate.js'
 import {auth} from '../utils/Firebase.js'
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile} from "firebase/auth";
-import { useNavigate} from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addUser } from '../utils/UserSlice.js'
 
@@ -15,7 +14,6 @@ const Login = () => {
     const email = useRef(null)
     const password = useRef(null)
     const name = useRef(null)
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const handleClick = () => {
@@ -31,15 +29,12 @@ const Login = () => {
           .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
-          console.log(user);
           
           updateProfile(user, {
             displayName: name.current.value
           }).then(() => {
-            const {uid,email,displayName} = auth.currentUser;
-            console.log(auth.currentUser); 
+            const {uid,email,displayName} = auth.currentUser; 
             dispatch(addUser({uid:uid,email:email,displayName:displayName}))
-            navigate('/Browse')
           }).catch((error) => {
             seterrorMessage(error.message)
           });
@@ -58,7 +53,6 @@ const Login = () => {
            // Signed in 
           const user = userCredential.user;
           console.log(user);
-          navigate('/Browse')
           // ...
           })
          .catch((error) => {
