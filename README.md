@@ -7,6 +7,12 @@
 - Sign up Form
 - form validation
 - useRef Hook
+- Firebase Setup
+- Create signup user account
+- Implement ign in and User Api
+- Created Redux Store with UserSlice 
+- Implemented Sign out 
+- Update Profile 
 
 
 # features
