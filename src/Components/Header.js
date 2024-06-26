@@ -34,10 +34,10 @@ const Header = () => {
    },[])
 
   return (
-    <div className='absolute bg-gradient-to-b from-black z-10 w-full flex justify-between'>
-        <img className='w-[120px]' src={logo} />
-       {user && (<div className='flex align-middle  justify-center p-8'>
-          <img className='h-8 ' src={avatar}/>
+    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
+        <img className='w-24' src={logo} />
+       {user && (<div className='flex p-2'>
+          <img className='w-10 h-10 ' src={avatar}/>
           <button onClick={handleClick} className=' font-bold text-white'>Signout</button>
         </div>)}
     </div>
